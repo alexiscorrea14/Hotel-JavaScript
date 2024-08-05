@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="modal-titulo">${reserva.titulo}</div>
                 <div class="modal-imagenes">${reserva.imagenes}</div>
                 <div class="modal-descripcion">
-                    <p>¿Cuántas personas reservarán esta habitación?</p>
+                    <p>¿Cuántas personas reservarán esta habitación?</p> <!-- Párrafo descriptivo agregado -->
                 </div>
                 <div class="modal-contador">
                     <button class="contador-btn btn-menos" data-index="${index}">-</button>
