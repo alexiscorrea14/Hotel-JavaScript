@@ -5,8 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const ocultarModalBtn = document.getElementById('ocultar-reserva');
     const btnTuReserva = document.getElementById('nav-reserva');
     const confirmarReservaBtn = document.getElementById('confirmar-reserva');
+    const contadorReserva = document.getElementById('contador-reserva');
 
     let reservas = [];
+
+    // Asegúrate de que el modal esté oculto al cargar la página
+    if (modal) {
+        modal.style.display = 'none';
+    }
+
+    // Inicializa el contador al cargar la página
+    contadorReserva.textContent = reservas.length;
 
     function abrirModal(tarjeta) {
         const titulo = tarjeta.querySelector('h2').outerHTML;
@@ -27,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="modal-titulo">${reserva.titulo}</div>
                 <div class="modal-imagenes">${reserva.imagenes}</div>
                 <div class="modal-descripcion">
-                    <p>¿Cuántas personas reservarán esta habitación?</p> <!-- Párrafo descriptivo agregado -->
+                    <p>¿Cuántas personas reservarán esta habitación?</p>
                 </div>
                 <div class="modal-contador">
                     <button class="contador-btn btn-menos" data-index="${index}">-</button>
@@ -42,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Mostrar u ocultar el modal según la cantidad de reservas
         modal.style.display = reservas.length === 0 ? 'none' : 'block';
+
+        // Actualiza el contador en TU Reserva
+        contadorReserva.textContent = reservas.length;
 
         // Inicializar botones del contador y eliminar
         document.querySelectorAll('.btn-mas').forEach(btn => {
@@ -87,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function agregarHabitacion() {
-        const tarjeta = document.querySelector('.tarjeta-habitacion'); 
+        const tarjeta = document.querySelector('.tarjeta-habitacion');
         if (tarjeta) {
             abrirModal(tarjeta);
         } else {
@@ -100,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Habitación reservada: ${reserva.titulo}, Cantidad de personas: ${reserva.cantidad}`);
         });
         reservas = [];
-        ocultarModal();
+        actualizarModal(); // Actualiza el contador y oculta el modal si no hay reservas
     }
 
     spanClose.addEventListener('click', ocultarModal);
@@ -120,5 +132,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     btnTuReserva.addEventListener('click', mostrarReservas);
-    confirmarReservaBtn.addEventListener('click', confirmarReserva); 
+    confirmarReservaBtn.addEventListener('click', confirmarReserva);
 });
