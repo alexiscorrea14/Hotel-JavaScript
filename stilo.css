@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* portada */
+.header {
+    position: relative;
+    height: 100vh;
+    background: url('./imagenes/principal.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    z-index: 1;
+}
+
+.icon-left {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.nav-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-right a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    text-shadow: 20px 20px 20px rgb(0, 0, 0);
+}
+
+/* iconos tarjeta */
+.info {
+    padding: 50px;
+    background-color: #000000; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+.info-item {
+    text-align: center;
+    background: #ff6a6a; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+.info-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgb(255, 255, 255);
+}
+.info-item i {
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.info-item h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+.info-item p {
+    font-size: 1rem;
+}
+.tarjeta-derecha-seccion {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+/* tarjetas derecha */
+.tarjeta-derecha-seccion {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+.tarjeta-derecha {
+    display: flex;
+    flex-direction: row;
+    background-color: #ff6a6a;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta-derecha:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(255, 255, 255);
+}
+.tarjeta-imagenes{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.tarjeta-imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.tarjeta-imagenes img:nth-child(1) {
+    animation: desvanecer 15s infinite;
+}
+.tarjeta-imagenes img:nth-child(2) {
+    animation: desvanecer 15s infinite 5s;
+}
+.tarjeta-imagenes img:nth-child(3) {
+    animation: desvanecer 15s infinite 10s;
+}
+@keyframes desvanecer {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.tarjeta-derecha:hover .slider-imagenes img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.contenido-tarjeta {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido-tarjeta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contenido-tarjeta p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* tarjetas izquierda */
+.tarjeta-izquierda-seccion {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+.tarjeta-izquierda {
+    display: flex;
+    flex-direction: row;
+    background-color: #ff6a6a;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta-izquierda:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(255, 255, 255);
+}
+.contenido-tarjeta {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.contenido-tarjeta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contenido-tarjeta p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.tarjeta-imagenes {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.tarjeta-imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.tarjeta-imagenes img:nth-child(1) {
+    animation: desvanecer 25s infinite;
+}
+
+.tarjeta-imagenes img:nth-child(2) {
+    animation: desvanecer 25s infinite 5s;
+}
+.tarjeta-imagenes img:nth-child(3) {
+    animation: desvanecer 25s infinite 10s;
+}
+.tarjeta-imagenes img:nth-child(4) {
+    animation: desvanecer 25s infinite 15s;
+}
+.tarjeta-imagenes img:nth-child(5) {
+    animation: desvanecer 25s infinite 20s;
+}
+@keyframes desvanecer {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*habitaciones*/
+.seccion-tarjetas-habitaciones {
+    padding: 2rem;
+    background-color: #000000;
+}
+.titulo-habitaciones {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ff6a6a;
+}
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.tarjeta-habitacion {
+    background: #ff6a6a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.tarjeta-habitacion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.imagen-habitacion {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+}
+.slider-imagenes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slider-imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slider-imagenes img:nth-child(1) {
+    animation: desvanecer 15s infinite;
+}
+.slider-imagenes img:nth-child(2) {
+    animation: desvanecer 15s infinite 5s;
+}
+.slider-imagenes img:nth-child(3) {
+    animation: desvanecer 15s infinite 10s;
+}
+@keyframes desvanecer {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+.contenido-habitacion {
+    padding: 1rem;
+    text-align: center;
+}
+
+.contenido-habitacion h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+.contenido-habitacion p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #000000;
+}
+.precio {
+    font-weight: bold;
+    color: #000000;
+}
+.btn-reservar {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn-reservar:hover {
+    background-color: rgb(168, 148, 30);
+}
+
+/* resañas */
+.seccion-resenas {
+    padding: 50px;
+    background-color: #000000;
+    text-align: center;
+}
+.titulo-resenas {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000000;
+    background-color: #ff6a6a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.titulo-resenas i {
+    margin-right: 10px;
+    color: rgb(168, 148, 30);
+}
+.contenedor-resenas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.resena {
+    width: 320px;
+    height: 350px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+.imagen-redonda {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.imagen-redonda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.estrellas {
+    margin-bottom: 10px;
+}
+.estrella {
+    color: rgb(168, 148, 30);
+    font-size: 1.5rem;
+}
+.resena p {
+    font-size: 0.9rem;
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* footer */
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+.contacto-footer {
+    border-top: 1px solid #ffffff;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.contacto-footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.contacto-footer p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+.contacto-footer i {
+    margin-right: 10px;
+    color: #ff6a6a;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+}
+.derechos-footer {
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+}
+.derechos-footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.418); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.modal-content {
+    background-color: #ff6a6a;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    width: 80%; 
+    max-width: 600px; 
+    position: relative; 
+}
+.close-btn {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+.modal-footer {
+    text-align: center;
+    margin-top: 10px;
+}
+.confirmar-btn, .ocultar-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.confirmar-btn:hover, .ocultar-btn:hover {
+    background-color: rgb(168, 148, 30);
+}
+.modal-contador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; 
+    margin: 1rem 0; 
+}
+.contador-btn {
+    background-color: #000000; 
+    border: none;
+    color: #fff; 
+    font-size: 1.5rem; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.contador-btn:hover {
+    background-color: rgb(168, 148, 30); 
+    transform: scale(1.1);
+}
+.eliminar-btn {
+    background-color: #000000; 
+}
+.eliminar-btn:hover {
+    background-color: rgb(168, 148, 30);
+}
+#contador {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.confirmar-btn, .ocultar-btn {
+    background-color: #000000; 
+    color: #fff; 
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.confirmar-btn:hover, .ocultar-btn:hover {
+    background-color: rgb(168, 148, 30);
+    transform: scale(1.05); 
+}
+.modal-descripcion {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000000;
+    text-align: center; 
+}
+
+/* Botones del modal */
+.close-btn {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+.modal-footer {
+    text-align: center;
+    margin-top: 10px;
+}
+.confirmar-btn, .ocultar-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.confirmar-btn:hover, .ocultar-btn:hover {
+    background-color: rgb(168, 148, 30);
+}
+.modal-contador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; 
+    margin: 1rem 0; 
+}
+.contador-btn {
+    background-color: #000000; 
+    border: none;
+    color: #fff; 
+    font-size: 1.5rem; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.contador-btn:hover {
+    background-color: rgb(168, 148, 30); 
+    transform: scale(1.1);
+}
+.eliminar-btn {
+    background-color: #000000; 
+}
+.eliminar-btn:hover {
+    background-color: rgb(168, 148, 30);
+}
+#contador {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.confirmar-btn, .ocultar-btn {
+    background-color: #000000; 
+    color: #fff; 
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.confirmar-btn:hover, .ocultar-btn:hover {
+    background-color: rgb(168, 148, 30);
+    transform: scale(1.05); 
+}
+.modal-descripcion {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000000;
+    text-align: center; 
+}
+
+/* Estilo del botón redondo */
+.boton-redondo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff6a6a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+.boton-redondo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgb(255, 255, 255);
+}
