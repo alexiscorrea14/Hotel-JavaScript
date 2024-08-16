@@ -1,0 +1,57 @@
+[
+    {
+      "nombre": "Habitación Estándar",
+      "descripcion": "Una habitación cómoda y acogedora con todas las comodidades básicas.",
+      "precio": 100,
+      "imagenes": [
+        "./imagenes/habitacion1.jpg",
+        "./imagenes/habitacion01.jpg"
+      ]
+    },
+    {
+      "nombre": "Habitación Doble",
+      "descripcion": "Ideal para parejas, con un ambiente romántico y vistas espectaculares.",
+      "precio": 150,
+      "imagenes": [
+        "./imagenes/habitacion2.jpg",
+        "./imagenes/habitacion02.jpg"
+      ]
+    },
+    {
+      "nombre": "Suite Junior",
+      "descripcion": "Habitación espaciosa con áreas separadas para dormir y relajarse.",
+      "precio": 200,
+      "imagenes": [
+        "./imagenes/habitacion3.jpg",
+        "./imagenes/habitacion03.jpg"
+      ]
+    },
+    {
+      "nombre": "Suite Presidencial",
+      "descripcion": "Una suite de lujo con todas las comodidades y un toque elegante.",
+      "precio": 350,
+      "imagenes": [
+        "./imagenes/habitacion4.jpg",
+        "./imagenes/habitacion04.jpg"
+      ]
+    },
+    {
+      "nombre": "Habitación Familiar",
+      "descripcion": "Espaciosa y equipada para alojar a toda la familia con comodidad.",
+      "precio": 250,
+      "imagenes": [
+        "./imagenes/habitacion5.jpg",
+        "./imagenes/habitacion05.jpg"
+      ]
+    },
+    {
+      "nombre": "Habitación Deluxe",
+      "descripcion": "Habitación lujosa con vista panorámica y servicios exclusivos.",
+      "precio": 300,
+      "imagenes": [
+        "./imagenes/habitacion6.jpg",
+        "./imagenes/habitacion06.jpg"
+      ]
+    }
+  ]
+  

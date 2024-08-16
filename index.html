@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="stilo.css">
-  <title>Document</title>
+  <title>hotelnorte</title>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
           <li><a href="#contacto">Contacto</a></li>
           <li>
             <a href="#" id="nav-reserva" class="btn-reserva">
-              TU Reserva 
+              TU Reserva
               <span id="contador-reserva" class="contador">0</span>
             </a>
           </li>
@@ -33,7 +34,7 @@
       </div>
     </div>
   </header>
-  
+
 
   <!-- iconos de informacion -->
   <section class="info">
@@ -176,104 +177,13 @@
     </div>
   </section>
 
-  <!-- habitaciones  -->
-  <section class="seccion-tarjetas-habitaciones" id="habitaciones">
-    <h2 class="titulo-habitaciones">
-      <i class="fa-solid fa-bed"></i> Nuestras Habitaciones
-    </h2>
+  <!-- habitaciones -->
+  <div class="seccion-tarjetas-habitaciones" id="habitaciones">
+    <h2 class="titulo-habitaciones">Nuestras Habitaciones</h2>
     <div class="contenedor-tarjetas">
-      <!-- Tarjeta 1 -->
-      <div class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-          <div class="slider-imagenes">
-            <img src="./imagenes/habitacion1.jpg" alt="Habitación 1 Imagen 1">
-            <img src="./imagenes/habitacion01.jpg" alt="Habitación 1 Imagen 2">
-          </div>
-        </div>
-        <div class="contenido-habitacion">
-          <h2>Habitación Estándar</h2>
-          <p>Una habitación cómoda y acogedora con todas las comodidades básicas.</p>
-          <p class="precio">$100 por noche</p>
-          <button class="btn-reservar">Reservar</button>
-        </div>
-      </div>
-      <!-- Tarjeta 2 -->
-      <div class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-          <div class="slider-imagenes">
-            <img src="./imagenes/habitacion2.jpg" alt="Habitación 2 Imagen 1">
-            <img src="./imagenes/habitacion02.jpg" alt="Habitación 2 Imagen 2">
-          </div>
-        </div>
-        <div class="contenido-habitacion">
-          <h2>Habitación Doble</h2>
-          <p>Ideal para parejas, con un ambiente romántico y vistas espectaculares.</p>
-          <p class="precio">$150 por noche</p>
-          <button class="btn-reservar">Reservar</button>
-        </div>
-      </div>
-      <!-- Tarjeta 3 -->
-      <div class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-          <div class="slider-imagenes">
-            <img src="./imagenes/habitacion3.jpg" alt="Habitación 3 Imagen 1">
-            <img src="./imagenes/habitacion03.jpg" alt="Habitación 3 Imagen 2">
-          </div>
-        </div>
-        <div class="contenido-habitacion">
-          <h2>Suite Junior</h2>
-          <p>Habitación espaciosa con áreas separadas para dormir y relajarse.</p>
-          <p class="precio">$200 por noche</p>
-          <button class="btn-reservar">Reservar</button>
-        </div>
-      </div>
-      <!-- Tarjeta 4 -->
-      <div class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-          <div class="slider-imagenes">
-            <img src="./imagenes/habitacion4.jpg" alt="Habitación 4 Imagen 1">
-            <img src="./imagenes/habitacion04.jpg" alt="Habitación 4 Imagen 2">
-          </div>
-        </div>
-        <div class="contenido-habitacion">
-          <h2>Suite Presidencial</h2>
-          <p>Una suite de lujo con todas las comodidades y un toque elegante.</p>
-          <p class="precio">$350 por noche</p>
-          <button class="btn-reservar">Reservar</button>
-        </div>
-      </div>
-      <!-- Tarjeta 5 -->
-      <div class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-          <div class="slider-imagenes">
-            <img src="./imagenes/habitacion5.jpg" alt="Habitación 5 Imagen 1">
-            <img src="./imagenes/habitacion05.jpg" alt="Habitación 5 Imagen 2">
-          </div>
-        </div>
-        <div class="contenido-habitacion">
-          <h2>Habitación Familiar</h2>
-          <p>Espaciosa y equipada para alojar a toda la familia con comodidad.</p>
-          <p class="precio">$250 por noche</p>
-          <button class="btn-reservar">Reservar</button>
-        </div>
-      </div>
-      <!-- Tarjeta 6 -->
-      <div class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-          <div class="slider-imagenes">
-            <img src="./imagenes/habitacion6.jpg" alt="Habitación 6 Imagen 1">
-            <img src="./imagenes/habitacion06.jpg" alt="Habitación 6 Imagen 2">
-          </div>
-        </div>
-        <div class="contenido-habitacion">
-          <h2>Habitación Deluxe</h2>
-          <p>Habitación lujosa con vista panorámica y servicios exclusivos.</p>
-          <p class="precio">$300 por noche</p>
-          <button class="btn-reservar">Reservar</button>
-        </div>
-      </div>
     </div>
-  </section>
+  </div>
+ 
 
   <!-- resañas  -->
   <div class="seccion-resenas">
@@ -360,7 +270,8 @@
   <button id="volver-iconos" class="boton-redondo">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
   <script src="iconos.js"></script>
   <script src="main.js"></script>
 </body>
